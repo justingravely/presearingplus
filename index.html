@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/27a12b435e.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Redressed&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Presearing Plus</title>
+</head>
+
+<body>
+  <div class="wrapper">
+  <div class="nav">
+    <h1 id="title">
+      <div id="titleShield"></div>Presearing <span class="plus">Plus+</span>
+    </h1>
+    <div class="navLinks">
+      <a href="#">Interactive Map</a>
+      <a href="#">Professions</a>
+      <a href="#">Lore</a>
+    </div>
+
+    <i id="hamburger" class="fas fa-bars"></i>
+  </div>
+  <!-- <div class="post1"></div>
+  <div class="post2"></div> -->
+
+  <section id="main">
+    <div class="shield"></div>
+    <div class="overMap">
+      <div class="overOutlines">
+        <!-- PvP Zone -->
+        <div class="grendichVillage"></div>
+        <!-- Guild Halls -->
+        <div class="grendichCastle"></div>
+        <div class="Rin"></div>
+        <!-- PvE Zones -->
+        <div class="deldrimorPeaks"></div>
+        <div class="surmia"></div>
+
+        <p id="pve">Serenity Temple</p>
+        <div id="serenityTemple">
+          <div class="innerHover">
+            <div class="hoverContent">
+              <h2>Serenity Temple</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, perspiciatis sint labore dignissimos
+                deserunt ad voluptates quaerat obcaecati explicabo maiores eius velit? Saepe, eos iste! Dolorem,
+                similique quidem? Debitis, quaerat.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- explainers -->
+      <div id="explainers">
+        <div id="rurik"></div>
+        <p class="explainersText">Ahh, Serenity Temple, Once owned by the seven housecat monks of the garen platter
+          organization. It's a shame that the bandit squad, Legs4Dinner, have done it to those poor kitties</p>
+        <div class="explainersButtons">
+          <button id="one">That's So Pog</button>
+          <button id="one">Bye</button>
+        </div>
+      </div>
+
+      <div class="overNames">
+        <div class="towns" id="ascalon">
+          <div class="citycon"></div>
+          <p>Ascalon City</p>
+        </div>
+        <div class="towns" id="baradinEstate">
+          <div class="towncon"></div>
+          <p>The Baradin Estate</p>
+        </div>
+        <div class="towns" id="ashfordAbbey">
+          <div class="towncon"></div>
+          <p>Ashford Abbey</p>
+        </div>
+        <div class="towns" id="fortRanik">
+          <div class="towncon"></div>
+          <p>Fort Ranik</p>
+        </div>
+        <div class="towns" id="foblesFair">
+          <div class="towncon"></div>
+          <p>Foble's Fair</p>
+        </div>
+      </div>
+    </div>
+    <div class="underMap"></div>
+  </section>
+  <div class="credit">
+    <a href="https://mohammadqureshi.com/" target=" ">Art Credit</a>
+    <a href="https://www.reddit.com/r/GuildWars/comments/ffe34k/expanded_presearing_map/" target=" ">Expanded Map
+      Credit</a>
+  </div>
+</div>
+
+  <section id="lore">
+    <div class="loreTitle">
+      <h1>~Lore~</h1>
+    </div>
+    <div class="loreContent">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos ad nobis assumenda fugit adipisci quae repellendus a iste nemo culpa eveniet dolor animi, exercitationem velit accusantium libero excepturi quo at asperiores quod. Cupiditate id voluptates mollitia laborum est cum aliquam assumenda modi, ea molestias officia. Odit placeat animi modi quia! Deserunt ipsum quas provident dolores molestiae voluptatibus. Placeat veniam numquam harum unde, molestiae suscipit alias omnis, necessitatibus ducimus ullam provident voluptatem expedita, consequuntur quidem porro? Ut unde officiis placeat, velit facere eum magni tenetur maiores quae accusantium ex ad, inventore voluptatum animi porro sunt recusandae fugiat. Porro explicabo ea odio tenetur quod? <br><br><br> Officiis fugit molestias temporibus praesentium nulla debitis atque minus alias, sequi cum eveniet voluptatum, voluptatibus sint incidunt. Natus possimus consequatur suscipit blanditiis placeat numquam obcaecati maxime inventore, eius quis dolorum fuga, dolore deserunt illo quod. Neque delectus non, rem modi suscipit consectetur eius? Earum at aspernatur architecto unde nobis, eius, deleniti explicabo in ratione ab dolorem, facilis temporibus esse sed. Aliquid quia, facilis voluptas, laboriosam suscipit impedit praesentium repellendus debitis nostrum magnam eius? Libero modi, deleniti odio architecto ipsam cum vel suscipit accusantium dolorem. Fugiat porro tenetur numquam expedita laborum illum ut. Cupiditate harum inventore laborum similique explicabo!</p>
+      <div class="loreImg"></div>
+    </div>
+  </section>
+
+</body>
+
+<script>
+  var pveName = document.getElementById("pve");
+  var serenity = document.getElementById("serenityTemple");
+  var explain = document.getElementById("explainers");
+
+  pveName.addEventListener("mouseenter", e => {
+    serenity.style.opacity = "1";
+    explain.style.opacity = "1";
+    explain.style.pointerEvents = "all";
+  });
+  pveName.addEventListener("mouseleave", e => {
+    serenity.style.opacity = "0.3";
+  });
+
+
+
+
+</script>
+
+</html>
