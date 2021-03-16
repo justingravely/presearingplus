@@ -90,33 +90,6 @@
           </div>
         </div>
       </div>
-      <div id="content" class="content" style="display: none">
-        <h1>New ENEMAYS ;<Obj></Obj>
-        </h1>
-        <div class="contentSectionOne">
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias natus dolorum distinctio neque inventore.
-            Sed quasi iure, voluptatibus quas a consequuntur, aspernatur voluptatem cupiditate et, nesciunt harum illo
-            minima dolorum. Magnam beatae tempora numquam dolore ab omnis cumque, a placeat odio tenetur? Velit minima
-            adipisci tempora natus voluptates rem eius unde. Consequatur tenetur sit nisi. Magnam, accusantium nobis,
-            voluptate tempora deleniti asperiores vitae quisquam, earum illum aliquid error totam? Vero, ad? Laborum
-            ducimus earum, quos nulla autem quibusdam possimus ab vitae necessitatibus quas, incidunt, excepturi
-            suscipit sunt. Mollitia nihil sit qui eligendi rerum laudantium illum iusto saepe aut quasi dolorem ad unde
-            soluta, tenetur delectus voluptate similique? Neque numquam voluptate hic dicta maxime deleniti maiores.
-            Nesciunt tempore dolores possimus delectus eius, vero excepturi placeat ipsam nemo nisi, itaque, deleniti
-            ipsa maxime! Enim, modi sed? Iusto illo impedit explicabo quisquam fugiat sapiente minima temporibus
-            repudiandae! Ad, incidunt omnis? Numquam distinctio atque sed perspiciatis iure illum vero enim quidem minus
-            alias, odit tempore pariatur repellat aspernatur iste placeat optio quas, provident animi et dolorum at sunt
-            magnam? Tempore libero voluptas numquam atque accusantium nesciunt esse, officiis voluptate molestiae! Quo,
-            voluptates iusto. Veritatis tenetur, ea nulla voluptatum vero hic rem reprehenderit assumenda cum quaerat
-            iure saepe porro quos doloribus quae culpa itaque, dolor iste. Nostrum reprehenderit cupiditate odio,
-            delectus nobis atque commodi architecto, maxime doloribus veritatis distinctio quibusdam fugit ipsa quis!
-            Porro dolorum, aut vel quae beatae commodi veritatis consequuntur, impedit incidunt omnis libero mollitia
-            laudantium voluptatum sapiente officia nobis accusantium? Ab id dolorem neque totam consectetur cum magni
-            minima at, nulla alias labo</p>
-          <div class="contentSectionOneImg"></div>
-        </div>
-      </div>
-      <div id="story" class="story" style="display: none">
 
       </div>
     </section>
@@ -135,6 +108,34 @@
         Credit</a>
     </div>
   </div>
+
+  <div id="content" class="content">
+    <h1>New ENEMAYS ;<Obj></Obj>
+    </h1>
+    <div class="contentSectionOne">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias natus dolorum distinctio neque inventore.
+        Sed quasi iure, voluptatibus quas a consequuntur, aspernatur voluptatem cupiditate et, nesciunt harum illo
+        minima dolorum. Magnam beatae tempora numquam dolore ab omnis cumque, a placeat odio tenetur? Velit minima
+        adipisci tempora natus voluptates rem eius unde. Consequatur tenetur sit nisi. Magnam, accusantium nobis,
+        voluptate tempora deleniti asperiores vitae quisquam, earum illum aliquid error totam? Vero, ad? Laborum
+        ducimus earum, quos nulla autem quibusdam possimus ab vitae necessitatibus quas, incidunt, excepturi
+        suscipit sunt. Mollitia nihil sit qui eligendi rerum laudantium illum iusto saepe aut quasi dolorem ad unde
+        soluta, tenetur delectus voluptate similique? Neque numquam voluptate hic dicta maxime deleniti maiores.
+        Nesciunt tempore dolores possimus delectus eius, vero excepturi placeat ipsam nemo nisi, itaque, deleniti
+        ipsa maxime! Enim, modi sed? Iusto illo impedit explicabo quisquam fugiat sapiente minima temporibus
+        repudiandae! Ad, incidunt omnis? Numquam distinctio atque sed perspiciatis iure illum vero enim quidem minus
+        alias, odit tempore pariatur repellat aspernatur iste placeat optio quas, provident animi et dolorum at sunt
+        magnam? Tempore libero voluptas numquam atque accusantium nesciunt esse, officiis voluptate molestiae! Quo,
+        voluptates iusto. Veritatis tenetur, ea nulla voluptatum vero hic rem reprehenderit assumenda cum quaerat
+        iure saepe porro quos doloribus quae culpa itaque, dolor iste. Nostrum reprehenderit cupiditate odio,
+        delectus nobis atque commodi architecto, maxime doloribus veritatis distinctio quibusdam fugit ipsa quis!
+        Porro dolorum, aut vel quae beatae commodi veritatis consequuntur, impedit incidunt omnis libero mollitia
+        laudantium voluptatum sapiente officia nobis accusantium? Ab id dolorem neque totam consectetur cum magni
+        minima at, nulla alias labo</p>
+      <div class="contentSectionOneImg"></div>
+    </div>
+  </div>
+  <div id="story" class="story">
 
 </body>
 
@@ -262,29 +263,29 @@
     iph++;
     changePage()
   })
-  function changePage() {
-    if (iph < 0) iph = 0;
-    if (iph > 2) iph = 2;
-    switch (iph) {
-      case 0:
-        iMap.style.display = "block";
-        content.style.display = "none";
-        story.style.display = "none";
-        mapNavText.innerHTML = "Interactive Map"
-        break;
-      case 1:
-        iMap.style.display = "none"
-        content.style.display = "block";
-        story.style.display = "none";
-        mapNavText.innerHTML = "Content"
-        break;
-      case 2:
-        iMap.style.display = "none"
-        content.style.display = "none";
-        story.style.display = "block";
-        mapNavText.innerHTML = "Story"
-    }
-  }
+  // function changePage() {
+  //   if (iph < 0) iph = 0;
+  //   if (iph > 2) iph = 2;
+  //   switch (iph) {
+  //     case 0:
+  //       iMap.style.display = "block";
+  //       content.style.display = "none";
+  //       story.style.display = "none";
+  //       mapNavText.innerHTML = "Interactive Map"
+  //       break;
+  //     case 1:
+  //       iMap.style.display = "none"
+  //       content.style.display = "block";
+  //       story.style.display = "none";
+  //       mapNavText.innerHTML = "Content"
+  //       break;
+  //     case 2:
+  //       iMap.style.display = "none"
+  //       content.style.display = "none";
+  //       story.style.display = "block";
+  //       mapNavText.innerHTML = "Story"
+  //   }
+  // }
 
 
 

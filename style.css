@@ -7,17 +7,14 @@
 }
 
 body {
-  background-position: center;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   background-color: black;
+  background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/821392922485981204/eddit.png");
+  background-repeat: no-repeat;
 }
 
 .wrapper {
-  background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/819646117624414218/eddit.png");
-  background-position: center;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -66,7 +63,7 @@ body {
 
 .colorBG {
   position: absolute;
-  height: 1250px; 
+  height: 1175px; 
   width: 65rem;
   display: flex;
   background-color: rgba(73, 66, 29, 0.911);
@@ -121,7 +118,7 @@ body {
 .credit {
   position: absolute;
   left: 50%;
-  margin-top: 73.5rem;
+  margin-top: 68.75rem;
   font-size: 0.8rem;
   z-index: 1;
   background-color: rgba(46, 139, 86, 0.753);
@@ -156,7 +153,7 @@ body {
   height: 9rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4rem;
+  margin-top: 2rem;
   z-index: 10;
 }
 
@@ -235,11 +232,12 @@ body {
 /* content */
 
 .content {
-  width: 100%;
+  width: 54.5%;
+  margin: auto;
+  margin-top: 2rem;
   height: 100%;
   border: 5px solid rgba(216, 189, 127, 0.76);
   background-color: black;
-  display: none;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -274,11 +272,11 @@ body {
 /* story */
 
 .story {
-  width: 100%;
-  height: 100%;
-  border: 5px solid rgba(216, 189, 127, 0.76);
+  width: 54.5%;
+  height: 50rem;
+  margin: auto;
+  border: 5px solid  rgba(73, 66, 29, 0.911);
   background-color: black;
-  display: none;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -494,8 +492,8 @@ body {
     width: 62rem;
   }
   .credit {
-    left: 2%;
-    width: 62.5rem;
+    left: 4%;
+    width: 61rem;
   }
   
 } 
