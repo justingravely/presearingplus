@@ -20,6 +20,7 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .nav {
@@ -35,8 +36,8 @@ body {
   position: absolute;
   background-color: rgba(46, 139, 86, 0.753);
   width: 64.5rem;
-  left: 50%;
-  margin-left: -32.25rem;
+  /* left: 50%;
+  margin-left: -32.25rem; */
   margin-top: 0.2rem;
   height: 4.5rem;
   display: flex;
@@ -65,8 +66,6 @@ body {
 
 .colorBG {
   position: absolute;
-  left: 50%;
-  margin-left: -32.5rem;
   height: 1250px; 
   width: 65rem;
   display: flex;
@@ -120,7 +119,9 @@ body {
 } */
 
 .credit {
-  margin: auto;
+  position: absolute;
+  left: 50%;
+  margin-top: 73.5rem;
   font-size: 0.8rem;
   z-index: 1;
   background-color: rgba(46, 139, 86, 0.753);
@@ -137,13 +138,12 @@ body {
 }
 
 #main {
-  left: 50%;
   width: 58.3rem;
   height: 750px;
   font-size: 1.3rem;
   border-radius: 5px;
   margin: auto;
-  margin-top: 8rem;
+  margin-top: -4.5rem;
   z-index: 1;
   box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.589);
 }
@@ -152,13 +152,12 @@ body {
 .shield {
   background-image: url("https://cdn.discordapp.com/attachments/309107283911245825/819362549945335858/250px-Crude_Shield.png");
   background-size: contain;
-  margin: auto;
   width: 8rem;
   height: 9rem;
-  position: absolute;
-  left: 50%;
-  margin-left: -4rem;
-  margin-top: -5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  z-index: 10;
 }
 
 .overMap {
@@ -168,6 +167,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 5px;
+  margin-top: 0rem;
   border: 5px solid rgba(216, 189, 127, 0.76);
 }
 
@@ -472,4 +472,30 @@ body {
 
 
 
-/* problems start after 998 width */
+/* problems start after 130 width */
+@media (min-width: 1031px) {
+    .colorBG {
+        left: 50%;
+        margin-left: -32.5rem;
+    }
+    .topBar {
+      left: 50%;
+      margin-left: -32.25rem;
+    }
+    .credit {
+      margin-left: -32.25rem;
+    }
+}
+@media (max-width: 1030px) {
+  .wrapper {
+    width: 65rem;
+  }
+  .topBar {
+    width: 62rem;
+  }
+  .credit {
+    left: 2%;
+    width: 62.5rem;
+  }
+  
+} 

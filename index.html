@@ -25,9 +25,8 @@
     </div>
     <!-- <div class="post1"></div>
   <div class="post2"></div> -->
-
+  <div class="shield"></div>
     <section id="main">
-      <div class="shield"></div>
       <!-- MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP -->
       <div id="iMap" class="overMap">
         <div class="overOutlines">
@@ -64,7 +63,7 @@
           <div class="explainersButtons">
             <button id="eBack">Back</button>
             <button id="eOne">Next</button>
-            <button class="byeButton" id="eTwo">Goodbye</button>
+            <button class="byeButton" id="eTwo">Continue</button>
           </div>
         </div>
 
@@ -165,6 +164,7 @@
   var newNames = [window["serenityTemple"], window["surmia"]];
   var newNames2 = [window["serenityText"], window["surmiaText"]];
   var blocked = 0;
+  var continueButton = 0;
 
   // iMap
   // serenityTemple
@@ -193,20 +193,28 @@
     }
   });
 
-  // glowies
+  // new zone GLOWIES (new zone border)
   function glowies() {
     if (explain.style.opacity == "1") {
       window[currentName.id].style.opacity = "1"
     }
     for (let i = 0; i < newNames.length; i++) {
-      console.log(currentName.id, newNames[i].id)
       if (currentName.id !== newNames[i].id) {
         window[newNames[i].id].style.opacity = "0.2";
-        window[newNames2[i].id].style.cursor = "auto";
+        window[newNames2[i].id].style.cursor = "default";
+      }
+      // setting all hovers back to pointer, adopted by glowies. ^^^^^^^^^^^^ ///
+      if (continueButton == 1) {
+        window[newNames2[i].id].style.cursor = "pointer";
       }
     }
+    if (continueButton == 1) {
+      continueButton = 0;
+    }
+    //                                                           ^^^^^^^^^^^^ ///
   }
 
+  // Textbox Buttons
   eOne.addEventListener("click", e => {
     next++;
     currentFun();
@@ -221,6 +229,9 @@
     explain.style.pointerEvents = "none";
     blocked = 0;
     window[currentName.id].style.opacity = "0.2";
+    //                                                          ^^^^^^^^^^^ ///
+    continueButton = 1;
+    glowies();
   })
 
   // functions for map
