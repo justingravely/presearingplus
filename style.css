@@ -173,6 +173,8 @@ body {
   width: 939px;
   height: 750px;
   border-radius: 5px;
+  margin-top: -47.2rem;
+  margin-left: -0rem;
 }
 
 .towns {
@@ -187,9 +189,19 @@ body {
   color: rgb(233, 220, 161);
 }
 
+.northLands {
+  position: absolute;
+  font-weight: lighter;
+  font-size: 1rem;
+  width: 7rem;
+  left: 50%;
+  margin-left: 2rem;
+  margin-top: 20rem;
+}
+
 #ascalon {
   margin-left: 33rem;
-  margin-top: 24rem;
+  margin-top: 25rem;
 }
 
 #ashfordAbbey {
@@ -227,6 +239,57 @@ body {
   width: 25px;
   height: 25px;
   margin: auto;
+}
+
+.stones {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0.2rem;
+  right: 1rem;
+  background-color: tan;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.726);
+}
+
+.stones p, #fireStone, #frostStone {
+  padding: 0.33rem;
+}
+
+.stones p {
+ font-weight: bold;
+ margin: auto;
+ text-shadow: 1px 1px 1px black;
+}
+
+#fireStone {
+  color: orangered;
+  padding-right: 0;
+  padding-left: 0.44rem;
+  /* font-weight: bold; */
+  opacity: 0.5;
+  transition: 0.3s;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+}
+#frostStone {
+  /* font-weight: bold; */
+  color: aqua;
+  padding-left: 0;
+  opacity: 0.5;
+  transition: 0.3s;
+  animation-duration: 1s;
+  animation-iteration-count: 3;
+}
+
+@keyframes obtain {
+  0% {
+    font-size: default;
+  } 50% {
+    font-size: 2rem
+  } 100% {
+    font-size: default;
+  }
 }
 
 /* content */
@@ -286,45 +349,16 @@ body {
 
 .mapNav {
   margin: auto;
-  margin-top: 1rem;
+  padding-top: 0.77rem;
+  padding-bottom: 1rem;
   z-index: 1;
-  margin-bottom: 4.5rem;
   display: flex;
   flex-direction: column;
   width: 20rem;
-}
-
-.arrows {
-  width: fit-content;
-  margin: auto;
-  margin-top: 0;
-}
-
-#arrowLeft {
-  font-size: 5rem;
-  transform: rotate(180deg);
-  margin-right: 1rem;
-  cursor: pointer;
-  text-shadow: 0px 0px 5px black;
-  transition: 0.1s;
-}
-
-#arrowLeft:hover {
-  text-shadow: 0px 0px 15px black;
-  margin-right: 1.1rem;
-}
-
-#arrowRight {
-  font-size: 5rem;
-  margin-left: 1rem;
-  cursor: pointer;
-  text-shadow: 0px 0px 5px black;
-  transition: 0.1s;
-}
-
-#arrowRight:hover {
-  text-shadow: 0px 0px 15px black;
-  margin-left: 1.1rem;
+  background-color: rgba(216, 189, 127, 0.76);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.609);
 }
 
 #mapNavText {
@@ -348,20 +382,34 @@ body {
 /* explainers */
 #explainers {
   position: absolute;
-  border: 1px solid rgba(165, 42, 42, 0.459);
   background-color: tan;
   width: 40rem;
   height: 7.7rem;
   margin: auto;
   left: 50%;
   margin-left: -20rem;
-  margin-top: 38rem;
+  bottom: 1rem;
   display: grid;
   grid-template-areas: "r t"
                        "r b";
   z-index: 3;
   opacity: 0;
   transition: 1s;
+  z-index: 12;
+}
+
+.blackBar {
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  background-color: black;
+  z-index: -1;
+}
+
+.blackBar p {
+  margin: auto;
+  padding-top: 0.3rem;
+  width: 7.5rem;
 }
 
 #rurik {
@@ -370,22 +418,32 @@ body {
   background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/819379558520193024/er2.gif");
   margin: auto;
   margin-left: 0.35rem;
+  margin-bottom: 0.9rem;
+  margin-top: 0.5rem;
   grid-area: r;
+  border-radius: 50%;
+  border: 4px solid rgb(41, 41, 41);
 }
 
 .explainersText {
+  font-weight: 100;
   grid-area: t;
-  margin-top: 0.3rem;
-  width: 30rem;
-  height: 4.8rem;
+  margin-top: 2.2rem;
+  margin-bottom: 0.4rem;
+  width: 32rem;
+  height: 2.7rem;
   margin-right: 0.3rem;
   color: rgb(26, 26, 26);
-
+  padding: 1.3rem;
+  padding-top: 0;
 }
 
 .explainersButtons {
   grid-area: b;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.2rem;
 }
 
 .explainersButtons button {
@@ -402,7 +460,7 @@ body {
 }
 
 .byeButton {
-  margin-left: 16.5rem;
+  margin-right: 0.1rem;
 }
 
 #serenityText {
@@ -411,6 +469,10 @@ body {
   margin-top: 27rem;
   z-index: 5;
   cursor: pointer;
+}
+
+.newZoneText:hover {
+  color: lightgoldenrodyellow;
 }
 
 #serenityTemple {
@@ -442,6 +504,70 @@ body {
   height: 19rem;
   margin-top: 2rem;
   margin-left: 36rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 3;
+  transition: 1s;
+}
+
+#guildHallsText {
+  position: absolute;
+  margin-left: 18.5rem;
+  margin-top: 8.8rem;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#guildHalls {
+  position: absolute;
+  background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/821923534552039454/outline3.png");
+  width: 22.5rem;
+  height: 32rem;
+  margin-top: 5rem;
+  margin-left: 4.2rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 3;
+  transition: 1s;
+}
+
+#villageText {
+  position: absolute;
+  margin-left: 7rem;
+  margin-top: 18rem;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#village {
+  position: absolute;
+  background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/822091325461102652/outline5.png");
+  margin-top: 10rem;
+  width: 22rem;
+  height: 18rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 3;
+  transition: 1s;
+}
+
+#deldrimorText {
+  position: absolute;
+  margin-left: 2rem;
+  margin-top: 42.5rem;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#deldrimor {
+  position: absolute;
+  background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/822091328296189972/outline4.png");
+  margin-top: 38.5rem;
+  width: 19rem;
+  height: 11rem;
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0.2;
