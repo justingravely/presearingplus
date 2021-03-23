@@ -63,7 +63,8 @@ body {
 
 .colorBG {
   position: absolute;
-  height: 1175px; 
+  /* height: 1175px;  */
+  height: 2000px; 
   width: 65rem;
   display: flex;
   background-color: rgba(73, 66, 29, 0.911);
@@ -118,7 +119,7 @@ body {
 .credit {
   position: absolute;
   left: 50%;
-  margin-top: 68.75rem;
+  margin-top: 119.5rem;
   font-size: 0.8rem;
   z-index: 1;
   background-color: rgba(46, 139, 86, 0.753);
@@ -197,6 +198,7 @@ body {
   left: 50%;
   margin-left: 2rem;
   margin-top: 20rem;
+  text-align: center;
 }
 
 #ascalon {
@@ -241,7 +243,87 @@ body {
   margin: auto;
 }
 
+#catacombs {
+  display: none;
+  background-color: black;
+  width: 58.3rem;
+  margin-top: 5.5rem;
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  margin-left: -29.3rem;
+  display: flex;
+}
+
+#catacombsImg {
+  margin: auto;
+}
+
+#catacombsMark {
+  position: absolute;
+  font-size: 1rem;
+  font-size: 2rem;
+  left: 51rem;
+  top: 5rem;
+  animation: mark;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  color: greenyellow;
+}
+
+@keyframes mark {
+  0% {
+    transform: rotate(-360deg);
+    font-size: 1rem;
+    top: 5.5rem;
+    left: 51.5rem;
+  } 50% {
+    transform: rotate(0deg);
+    font-size: 2rem;
+    top: 5rem;
+    left: 51rem;
+  } 100% {
+    transform: rotate(-360deg);
+    font-size: 1rem;
+    top: 5.5rem;
+    left: 51.5rem;
+  }
+}
+
+#catacombsText {
+  transition: 1s;
+  padding: 1rem;
+  margin: auto;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.925);
+}
+
+#catacombsButton {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: silver;
+  color: black;
+  position: absolute;
+  left: 38rem;
+  top: 43.5rem;
+  border-radius: 10px;
+  z-index: 10;
+  font-family: 'Redressed', cursive;
+  border: 2px solid black;
+  text-decoration: underline;
+  transition: 0.5s;
+}
+#catacombsButton:hover {
+ background-color: black;
+ color: white;
+ border: 2px solid white;
+}
+
+/* stones */
 .stones {
+  font-family: 'Redressed', cursive;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -292,92 +374,7 @@ body {
   }
 }
 
-/* content */
 
-.content {
-  width: 54.5%;
-  margin: auto;
-  margin-top: 2rem;
-  height: 100%;
-  border: 5px solid rgba(216, 189, 127, 0.76);
-  background-color: black;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-}
-
-.content h1 {
-  margin: auto;
-  margin-left: 2rem;
-  width: fit-content;
-  padding: 1rem;
-}
-
-.contentSectionOne {
-  display: flex;
-}
-
-.contentSectionOne p {
-  width: 30rem;
-  margin: auto;
-  margin-top: 1rem;
-}
-
-.contentSectionOneImg {
-  height: 40rem;
-  width: 20rem;
-  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06819abc-8032-472f-8292-deb057e1c3fc/d57qhtd-2e3ea745-eba9-4345-90bf-84e92668b8c1.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMDY4MTlhYmMtODAzMi00NzJmLTgyOTItZGViMDU3ZTFjM2ZjXC9kNTdxaHRkLTJlM2VhNzQ1LWViYTktNDM0NS05MGJmLTg0ZTkyNjY4YjhjMS5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.2XN4_yonoxgXtOzP5kiex7bgmEeH1dl4G-tPtFkenXo");
-  background-size: cover;
-  margin: auto;
-  margin-top: 1rem;
-}
-
-/* story */
-
-.story {
-  width: 54.5%;
-  height: 50rem;
-  margin: auto;
-  border: 5px solid  rgba(73, 66, 29, 0.911);
-  background-color: black;
-  overflow-y: scroll;
-  display: flex;
-  flex-direction: column;
-}
-
-/* map nav */
-
-.mapNav {
-  margin: auto;
-  padding-top: 0.77rem;
-  padding-bottom: 1rem;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  width: 20rem;
-  background-color: rgba(216, 189, 127, 0.76);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.609);
-}
-
-#mapNavText {
-  margin: auto;
-  font-family: 'Redressed', cursive;
-  text-shadow: rgb(0, 0, 0) 0px 2px 2px;
-  font-size: 2rem;
-}
-
-.mapNav a {
- text-decoration: none;
- font-size: 1.5rem;
- margin-left: 1rem;
- margin-right: 0rem;
- transition: 0.15s;
- padding-bottom: 1rem;
-}
-
-/* new stuff */
 
 /* explainers */
 #explainers {
@@ -463,16 +460,13 @@ body {
   margin-right: 0.1rem;
 }
 
-#serenityText {
-  position: absolute;
-  margin-left: 46rem;
-  margin-top: 27rem;
-  z-index: 5;
-  cursor: pointer;
+.newZoneText {
+  text-align: center;
 }
 
 .newZoneText:hover {
   color: lightgoldenrodyellow;
+  text-decoration: underline;
 }
 
 #serenityTemple {
@@ -489,12 +483,22 @@ body {
   transition: 1s;
 }
 
+#serenityText {
+  position: absolute;
+  margin-left: 46rem;
+  margin-top: 27rem;
+  z-index: 5;
+  width: 10rem;
+  cursor: pointer;
+}
+
 #surmiaText {
   position: absolute;
-  margin-left: 42rem;
+  margin-left: 41rem;
   margin-top: 11rem;
   z-index: 5;
   cursor: pointer;
+  width: 6rem;
 }
 
 #surmia {
@@ -535,9 +539,10 @@ body {
 
 #villageText {
   position: absolute;
-  margin-left: 7rem;
+  margin-left: 6.5rem;
   margin-top: 18rem;
   z-index: 5;
+  width: 10rem;
   cursor: pointer;
 }
 
@@ -554,14 +559,6 @@ body {
   transition: 1s;
 }
 
-#deldrimorText {
-  position: absolute;
-  margin-left: 2rem;
-  margin-top: 42.5rem;
-  z-index: 5;
-  cursor: pointer;
-}
-
 #deldrimor {
   position: absolute;
   background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/822091328296189972/outline4.png");
@@ -573,6 +570,15 @@ body {
   opacity: 0.2;
   z-index: 3;
   transition: 1s;
+}
+
+#deldrimorText {
+  position: absolute;
+  margin-left: 2rem;
+  margin-top: 41.5rem;
+  z-index: 5;
+  cursor: pointer;
+  width: 10rem;
 }
 
 .innerHover {
@@ -592,7 +598,20 @@ body {
   font-size: 0;
 }
 
-/* LORE */
+/* details */
+
+#details {
+  width: 58.3rem;
+  height: 750px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  margin: auto;
+  margin-top: 8.5rem;
+  margin-bottom: 2.2rem;
+  z-index: 1;
+  box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.589);
+  border: 5px solid rgba(216, 189, 127, 0.76);
+}
 
 
 
