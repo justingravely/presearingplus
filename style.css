@@ -243,20 +243,30 @@ body {
   margin: auto;
 }
 
+/* catacombs */
+
 #catacombs {
-  display: none;
+  opacity: 0;
   background-color: black;
-  width: 58.3rem;
+  width: 58.1rem;
+  height: 36.5rem;
   margin-top: 5.5rem;
   position: absolute;
-  z-index: 6;
+  pointer-events: none;
   left: 50%;
   margin-left: -29.3rem;
   display: flex;
+  z-index: 10;
+  transition: 1s;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/06819abc-8032-472f-8292-deb057e1c3fc/d57qhtd-2e3ea745-eba9-4345-90bf-84e92668b8c1.jpg/v1/fill/w_720,h_960,q_75,strp/charr_necromancer_by_azurewyvern_d57qhtd-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD05NjAiLCJwYXRoIjoiXC9mXC8wNjgxOWFiYy04MDMyLTQ3MmYtODI5Mi1kZWIwNTdlMWMzZmNcL2Q1N3FodGQtMmUzZWE3NDUtZWJhOS00MzQ1LTkwYmYtODRlOTI2NjhiOGMxLmpwZyIsIndpZHRoIjoiPD03MjAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.DG0ZSNinX8tSBd8tR16HOlEGidD9qalvnB77axnigFo");
+  background-size: auto;
+  background-repeat: no-repeat;
+  border: 5px solid rgba(216, 189, 127, 0.76);
 }
 
 #catacombsImg {
   margin: auto;
+  border-left: 2px solid rgba(216, 189, 127, 0.76);
 }
 
 #catacombsMark {
@@ -292,11 +302,16 @@ body {
 }
 
 #catacombsText {
+  height: 100%;
   transition: 1s;
-  padding: 1rem;
   margin: auto;
-  font-weight: 100;
   color: rgba(255, 255, 255, 0.925);
+  background-color: rgba(0, 0, 0, 0.74);
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 2rem;
 }
 
 #catacombsButton {
@@ -319,6 +334,17 @@ body {
  background-color: black;
  color: white;
  border: 2px solid white;
+}
+
+#catacombs a {
+  position: absolute;
+  margin-left: 2rem;
+  margin-top: 33rem;
+  font-size: 0.9rem;
+}
+
+#catacombs a:hover {
+  color: rgb(161, 220, 224);
 }
 
 /* stones */
@@ -611,7 +637,94 @@ body {
   z-index: 1;
   box-shadow: 0px 0px 55px rgba(0, 0, 0, 0.589);
   border: 5px solid rgba(216, 189, 127, 0.76);
+  background-color: white;
+  color: black;
 }
+
+#detailsOne {
+  display: flex;
+  color: black;
+  text-align: center;
+  flex-direction: column;
+}
+
+#detailsOne p {
+  color: black;
+  line-height: 2rem;
+  font-weight: 100;
+}
+
+
+#detailsOneTop {
+  color: black;
+  display: flex;
+  padding: 2rem;
+}
+
+#detailsOne img {
+ height: 20rem;
+ }
+
+ #detailsOneTop div {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+ }
+
+ #className {
+  margin-top: 2rem;
+  font-size: 4rem;
+  font-family: 'Redressed', cursive;
+  font-weight: bold;
+ }
+
+ .classButtons {
+   position: absolute;
+   margin-left: 11rem;
+   margin-top: 17rem;
+   width: 35rem;
+   height: 5rem;
+   border: 1px solid red;
+   display: flex;
+   padding: 1rem;
+   justify-content: space-between;
+ }
+
+ .classButton {
+  border: 1px solid green;
+  height: 3rem;
+  width: 3rem;
+ }
+
+ .detailsOneBottom {
+   height: 22.2rem;
+ }
+
+ .skillWrapper {
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(4rem, 1fr));
+   grid-gap: 1rem;
+   height: 10rem;
+   width: 30rem;
+   margin: auto;
+   margin-top: 4rem;
+ }
+
+ .skillWrapper > div {
+  padding: 1rem;
+}
+
+.skillWrapper > div::before {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+
+ 
+
+ .skills {
+  border: 3px solid rgb(163, 92, 11);
+ }
 
 
 

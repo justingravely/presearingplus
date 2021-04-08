@@ -25,7 +25,7 @@
     </div>
     <!-- <div class="post1"></div>
   <div class="post2"></div> -->
-  <div class="shield"></div>
+    <div class="shield"></div>
     <section id="main">
       <!-- MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP -->
       <div id="iMap" class="overMap">
@@ -49,110 +49,163 @@
             </div>
           </div>
         </div>
-          <!-- PvE Zones -->
-          <p class="newZoneText" id="deldrimorText">Deldrimor Peaks (16-20)</p>
-          <div id="deldrimor">
-            <div class="innerHover">
-              <div class="hoverContent">
-                <h2>Deldrimor</h2>
-              </div>
-            </div>
-          </div>
-
-          <p class="newZoneText" id="surmiaText">Surmia (16-20)</p>
-          <div id="surmia">
-            <div class="innerHover">
-              <div class="hoverContent">
-                <h2>Surmia</h2>
-              </div>
-            </div>
-          </div>
-
-          <p class="newZoneText" id="serenityText">Serenity Temple (12-15)</p>
-          <div id="serenityTemple">
-            <div class="innerHover">
-              <div class="hoverContent">
-                <h2>Serenity Temple</h2>
-              </div>
+        <!-- PvE Zones -->
+        <p class="newZoneText" id="deldrimorText">Deldrimor Peaks (16-20)</p>
+        <div id="deldrimor">
+          <div class="innerHover">
+            <div class="hoverContent">
+              <h2>Deldrimor</h2>
             </div>
           </div>
         </div>
 
+        <p class="newZoneText" id="surmiaText">Surmia (16-20)</p>
+        <div id="surmia">
+          <div class="innerHover">
+            <div class="hoverContent">
+              <h2>Surmia</h2>
+            </div>
+          </div>
+        </div>
+
+        <p class="newZoneText" id="serenityText">Serenity Temple (12-15)</p>
+        <div id="serenityTemple">
+          <div class="innerHover">
+            <div class="hoverContent">
+              <h2>Serenity Temple</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- explainers -->
+      <div class="overNames">
+        <p class="northLands">The Northlands (6-14)</p>
+        <div class="towns" id="ascalon">
+          <div class="citycon"></div>
+          <p>Ascalon City</p>
+        </div>
+        <div class="towns" id="baradinEstate">
+          <div class="towncon"></div>
+          <p>The Baradin Estate</p>
+        </div>
+        <div class="towns" id="ashfordAbbey">
+          <div class="towncon"></div>
+          <p>Ashford Abbey</p>
+        </div>
+        <div class="towns" id="fortRanik">
+          <div class="towncon"></div>
+          <p>Fort Ranik</p>
+        </div>
+        <div class="towns" id="foblesFair">
+          <div class="towncon"></div>
+          <p>Foble's Fair</p>
+        </div>
+        <!-- Catacombs -->
+        <p id="catacombsButton">Enter The Catacombs</p>
+        <div id="catacombs" class="catacombs">
+          <i id="catacombsMark" class="fas fa-certificate"></i>
+          <p id="catacombsText">
+            <span>When a player is holding the two elemental stones in their inventory they may
+              invite up
+              to 3 other players in Ashford Abbey for a total party size of 4 to enter the Catacombs.</span>
+
+            <span>
+              You must venture to the marked location to offer the stones to a shrine of Grenth
+              in order to enter the Presearing version of The Underworld. Some rare level 20 bosses may spawn on the
+              way.
+            </span>
+
+            <span>
+              The Charr Dhuum Legion has replaced a great amount of regular underworld
+              enemies and bosses. Can you uncover the secrets and save Tyria?!
+            </span>
+          </p>
+          <img id="catacombsImg" src="https://wiki.guildwars.com/images/2/2d/The_Catacombs_map.jpg" alt="catacombs">
+          <a href="https://www.deviantart.com/azurewyvern/art/Charr-Necromancer-315324337" target=" ">Charr Necromancer
+            by AzureWyvern</a>
+        </div>
+        <!-- stones -->
+        <div class="stones">
+          <p>Stones</p>
+          <div class="stoneWrapper">
+            <i class="far fa-gem" id="fireStone"></i>
+            <i class="far fa-gem" id="frostStone"></i>
+          </div>
+        </div>
         <!-- explainers -->
-        <div class="overNames">
-          <p class="northLands">The Northlands (6-14)</p>
-          <div class="towns" id="ascalon">
-            <div class="citycon"></div>
-            <p>Ascalon City</p>
+        <div id="explainers">
+          <div class="blackBar">
+            <p>Prince Rurik</p>
           </div>
-          <div class="towns" id="baradinEstate">
-            <div class="towncon"></div>
-            <p>The Baradin Estate</p>
-          </div>
-          <div class="towns" id="ashfordAbbey">
-            <div class="towncon"></div>
-            <p>Ashford Abbey</p>
-          </div>
-          <div class="towns" id="fortRanik">
-            <div class="towncon"></div>
-            <p>Fort Ranik</p>
-          </div>
-          <div class="towns" id="foblesFair">
-            <div class="towncon"></div>
-            <p>Foble's Fair</p>
-          </div>
-          <!-- Catacombs -->
-          <p id="catacombsButton">Enter The Catacombs</p>
-          <div id="catacombs" class="catacombs">
-            <i id="catacombsMark" class="fas fa-certificate"></i>
-            <p id="catacombsText">When a player is holding the two elemental stones in their inventory they may invite up to 3 other players in Ashford Abbey for up to a total party size of 4. Once the party size has increased to 3 you may no longer leave the town and instead must enter The Catacombs. Once inside you may only exit back to Ashford Abbey. </br></br>
-
-            You and your party must venture to the marked location to offer the elemental stones to a shrine of grenth in order to enter a PreSearing version of the underworld. Some rare level 20 bosses may spawn in the Catacombs during this time. </br></br>
-
-            The Presearing version of the underworld is balanced around 4 players but can be cleared with 2 or even 1 if extremely skilled and studied. The Charr Dhuum Legion has replaced a great amount of regular underworld enemies and bosses. Can you uncover the secrets and save Tyria?!
-            </p>
-            <img id="catacombsImg" src="https://wiki.guildwars.com/images/2/2d/The_Catacombs_map.jpg" alt="catacombs">
-          </div>
-          <!-- stones -->
-          <div class="stones">
-            <p>Stones</p>
-            <div class="stoneWrapper">
-              <i class="far fa-gem" id="fireStone"></i>
-              <i class="far fa-gem" id="frostStone"></i>
+          <div id="rurik"></div>
+          <p id="eText" class="explainersText"></p>
+          <div class="explainersButtons">
+            <div class="eButtonsOne">
+              <button id="eBack">Back</button>
+              <button id="eOne">Next</button>
             </div>
-          </div>
-          <!-- explainers -->
-          <div id="explainers">
-            <div class="blackBar"><p>Prince Rurik</p></div>
-            <div id="rurik"></div>
-            <p id="eText" class="explainersText"></p>
-            <div class="explainersButtons">
-              <div class="eButtonsOne">
-                <button id="eBack">Back</button>
-                <button id="eOne">Next</button>
-              </div>
-              <div class="ebuttonsTwo">
-                <button class="byeButton" id="eTwo">Continue</button>
-              </div>
+            <div class="ebuttonsTwo">
+              <button class="byeButton" id="eTwo">Continue</button>
             </div>
           </div>
         </div>
       </div>
+  </div>
 
+  </div>
+  </section>
+
+
+
+  <section id="details">
+    <div id="detailsOne">
+      <div id="detailsOneTop">
+        <img src="https://cdn.discordapp.com/attachments/736393082831896590/824762324573356062/2.png" alt="thelady">
+        <div>
+          <p>New Allies have heard the call for aid, The Xotechians from the Utopia of Xotecha have come to ascalon to
+            assist Prince Rurik in defeating Dhuum and his charr mercenaries, theyre teaching ascalonions how to become
+            Chronomancers and Summoners.</p>
+        </div>
+        <img src="https://cdn.discordapp.com/attachments/736393082831896590/824762323805274173/1.png" alt="theman">
       </div>
-    </section>
-
-    
-
-    <section id="details">
-
-    </section>
-
-    <div class="credit">
-      <a href="https://mohammadqureshi.com/" target=" ">Art Credit</a>
-      <a href="https://www.reddit.com/r/GuildWars/comments/ffe34k/expanded_presearing_map/" target=" ">Expanded Map
-        Credit</a>
+      <div class="classButtons">
+        <div id="chronomancer" class="classButton"></div>
+        <div id="summoner" class="classButton"></div>
+        <div id="warrior" class="classButton"></div>
+        <div id="ranger" class="classButton"></div>
+        <div id="monk" class="classButton"></div>
+        <div id="necromancer" class="classButton"></div>
+        <div id="mesmer" class="classButton"></div>
+        <div id="elementalist" class="classButton"></div>
+        <div class="classButton"></div>
+      </div>
+      <div class="detailsOneBottom">
+        <p id="className">Chronomancer</p>
+        <div class="skillWrapper">
+            <div id="skillOne" class="skills"></div>
+            <div id="skillTwo" class="skills"></div>
+            <div id="skillThree" class="skills"></div>
+            <div id="skillFour" class="skills"></div>
+            <div id="skillFive" class="skills"></div>
+            <div id="skillSix" class="skills"></div>
+            <div id="skillSeven" class="skills"></div>
+            <div id="skillEight" class="skills"></div>
+            <div id="skillNine" class="skills"></div>
+            <div id="skillTen" class="skills"></div>
+            <div id="skillEleven" class="skills"></div>
+            <div id="skillTwelve" class="skills"></div>
+        </div>
+      </div>
     </div>
+    </div>
+  </section>
+
+  <div class="credit">
+    <a href="https://mohammadqureshi.com/" target=" ">Art Credit</a>
+    <a href="https://www.reddit.com/r/GuildWars/comments/ffe34k/expanded_presearing_map/" target=" ">Expanded Map
+      Credit</a>
+  </div>
   </div>
 
 </body>
@@ -195,7 +248,10 @@
   var frostStone = document.getElementById("frostStone");
   var catacombsButton = document.getElementById("catacombsButton");
   var catacombs = document.getElementById("catacombs");
-  catacombs.style.display = "none";
+  catacombs.style.opacity = "0";
+  // Class Stuff in Details
+
+  // 
 
   // iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap 
   // event listener cleanup function
@@ -327,12 +383,14 @@
 
   // catacombs 
   catacombsButton.addEventListener("click", e => {
-    if (catacombs.style.display == "none") {
-      catacombs.style.display = "flex";
-      catacombsButton.innerHTML = "EXIT The Catacombs"
+    if (catacombs.style.opacity == "0") {
+      catacombs.style.opacity = "1";
+      catacombs.style.pointerEvents = "all";
+      catacombsButton.innerHTML = "EXIT The Catacombs";
     } else {
-      catacombs.style.display = "none";
-      catacombsButton.innerHTML = "Enter The Catacombs"
+      catacombs.style.opacity = "0";
+      catacombs.style.pointerEvents = "none";
+      catacombsButton.innerHTML = "Enter The Catacombs";
     }
   })
 
@@ -358,11 +416,10 @@
   }
   function surmiaFunction() {
     textBoxFun()
-    console.log(next);
     if (next == 0) eText.innerHTML = "Surmia, once a nice place to live, now a land taken over by the flame legion";
     if (next == 1) eText.innerHTML = "who wish to summon their fire gods in the name of Dhuum to burn us all";
-    if (next == 2) eText.innerHTML = "It is here that you must defeat Zelock the charr chieftain of flame to obtain the flame stone"; 
-    if (next == 2) eTwo.innerHTML = "Defeat Zelock"; 
+    if (next == 2) eText.innerHTML = "It is here that you must defeat Zelock the charr chieftain of flame to obtain the flame stone";
+    if (next == 2) eTwo.innerHTML = "Defeat Zelock";
     glowies();
   }
   function serenityTempleFunction() {
