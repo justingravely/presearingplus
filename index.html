@@ -160,6 +160,7 @@
 
   <section id="details">
     <div id="detailsOne">
+      <h1>Profession Update</h1>
       <div id="detailsOneTop">
         <img src="https://cdn.discordapp.com/attachments/736393082831896590/824762324573356062/2.png" alt="thelady">
         <div>
@@ -178,23 +179,47 @@
         <div id="necromancer" class="classButton"></div>
         <div id="mesmer" class="classButton"></div>
         <div id="elementalist" class="classButton"></div>
-        <div class="classButton"></div>
       </div>
+      <p id="classDesc">Click On A Profession Icon Above To View It's Skills</p>
       <div class="detailsOneBottom">
         <p id="className">Chronomancer</p>
         <div class="skillWrapper">
-            <div id="skillOne" class="skills"></div>
-            <div id="skillTwo" class="skills"></div>
-            <div id="skillThree" class="skills"></div>
-            <div id="skillFour" class="skills"></div>
-            <div id="skillFive" class="skills"></div>
-            <div id="skillSix" class="skills"></div>
-            <div id="skillSeven" class="skills"></div>
-            <div id="skillEight" class="skills"></div>
-            <div id="skillNine" class="skills"></div>
-            <div id="skillTen" class="skills"></div>
-            <div id="skillEleven" class="skills"></div>
-            <div id="skillTwelve" class="skills"></div>
+          <div id="skillOne" class="skills">
+            <p>1</p>
+          </div>
+          <div id="skillTwo" class="skills">
+            <p>2</p>
+          </div>
+          <div id="skillThree" class="skills">
+            <p>3</p>
+          </div>
+          <div id="skillFour" class="skills">
+            <p>4</p>
+          </div>
+          <div id="skillFive" class="skills">
+            <p>5</p>
+          </div>
+          <div id="skillSix" class="skills">
+            <p>6</p>
+          </div>
+          <div id="skillSeven" class="skills">
+            <p>7</p>
+          </div>
+          <div id="skillEight" class="skills">
+            <p>8</p>
+          </div>
+          <div id="skillNine" class="skills">
+            <p>9</p>
+          </div>
+          <div id="skillTen" class="skills">
+            <p>10</p>
+          </div>
+          <div id="skillEleven" class="skills">
+            <p>11</p>
+          </div>
+          <div id="skillTwelve" class="skills">
+            <p>12</p>
+          </div>
         </div>
       </div>
     </div>
@@ -250,8 +275,44 @@
   var catacombs = document.getElementById("catacombs");
   catacombs.style.opacity = "0";
   // Class Stuff in Details
+  var chronomancer = document.getElementById("chronomancer");
+  var summoner = document.getElementById("summoner");
+  var warrior = document.getElementById("warrior");
+  var ranger = document.getElementById("ranger");
+  var monk = document.getElementById("monk");
+  var necromancer = document.getElementById("necromancer");
+  var elementalist = document.getElementById("elementalist");
+  var mesmer = document.getElementById("mesmer");
+  var skills = document.querySelectorAll(".skills")
 
-  // 
+  function classClickFunction(current) {
+    let classes = ["chronomancer", "summoner", "warrior", "ranger", "monk", "necromancer", "elementalist", "mesmer"];
+    let classColors = ["pink", "teal", "yellow", "lightgreen", "lightskyblue", "green", "red", "purple"]
+    for (let i = 0; i < classes.length; i++) {
+      if (current !== classes[i]) {
+        window[classes[i]].style.opacity = "0.5";
+      }
+      else {
+        window[classes[i]].style.opacity = "1";
+        document.getElementById("className").innerHTML = classes[i];
+        for (let j = 0; j < skills.length; j++) {
+          skills[j].style.borderColor = classColors[i];
+        }
+      }
+    }
+  }
+
+  chronomancer.addEventListener("click", e => { classClickFunction("chronomancer") });
+  summoner.addEventListener("click", e => { classClickFunction("summoner") });
+  warrior.addEventListener("click", e => { classClickFunction("warrior") });
+  ranger.addEventListener("click", e => { classClickFunction("ranger") });
+  monk.addEventListener("click", e => { classClickFunction("monk") });
+  necromancer.addEventListener("click", e => { classClickFunction("necromancer") });
+  elementalist.addEventListener("click", e => { classClickFunction("elementalist") });
+  mesmer.addEventListener("click", e => { classClickFunction("mesmer") });
+
+
+
 
   // iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap iMap 
   // event listener cleanup function
