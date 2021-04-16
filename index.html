@@ -151,12 +151,6 @@
           </div>
         </div>
       </div>
-  </div>
-
-  </div>
-  </section>
-
-
 
   <section id="details">
     <div id="detailsOne">
@@ -183,48 +177,51 @@
       <p id="classDesc">Click On A Profession Icon Above To View It's Skills</p>
       <div class="detailsOneBottom">
         <p id="className">Chronomancer</p>
-        <div class="skillWrapper">
-          <div id="skillOne" class="skills">
+        <div class="skillWrapper" id="skillWrapper">
+          <div id="dynamicToolTip">
+            <p id="dTTP">This is <span id="dTTName">Chronomancer</span> skill number <span id="dTTNumber">1</span></p>
+          </div>
+          <div id="skill1" class="skills">
             <p>1</p>
           </div>
-          <div id="skillTwo" class="skills">
+          <div id="skill2" class="skills">
             <p>2</p>
           </div>
-          <div id="skillThree" class="skills">
+          <div id="skill3" class="skills">
             <p>3</p>
           </div>
-          <div id="skillFour" class="skills">
+          <div id="skill4" class="skills">
             <p>4</p>
           </div>
-          <div id="skillFive" class="skills">
+          <div id="skill5" class="skills">
             <p>5</p>
           </div>
-          <div id="skillSix" class="skills">
+          <div id="skill6" class="skills">
             <p>6</p>
           </div>
-          <div id="skillSeven" class="skills">
+          <div id="skill7" class="skills">
             <p>7</p>
           </div>
-          <div id="skillEight" class="skills">
+          <div id="skill8" class="skills">
             <p>8</p>
           </div>
-          <div id="skillNine" class="skills">
+          <div id="skill9" class="skills">
             <p>9</p>
           </div>
-          <div id="skillTen" class="skills">
+          <div id="skill10" class="skills">
             <p>10</p>
           </div>
-          <div id="skillEleven" class="skills">
+          <div id="skill11" class="skills">
             <p>11</p>
           </div>
-          <div id="skillTwelve" class="skills">
+          <div id="skill12" class="skills">
             <p>12</p>
           </div>
         </div>
       </div>
     </div>
-    </div>
   </section>
+    </div>
 
   <div class="credit">
     <a href="https://mohammadqureshi.com/" target=" ">Art Credit</a>
@@ -261,7 +258,7 @@
   var eBack = document.getElementById("eBack");
   var eTwo = document.getElementById("eTwo");
   var currentFun = 0;
-  var currentName = 0;
+  var currentName = "hi";
   var next = 0;
   var textCount = 0;
   var newNames = [window["serenityTemple"], window["surmia"], window["guildHalls"], window["village"], window["deldrimor"]];
@@ -284,7 +281,98 @@
   var elementalist = document.getElementById("elementalist");
   var mesmer = document.getElementById("mesmer");
   var skills = document.querySelectorAll(".skills")
+  var skill1 = document.getElementById("skill1");
+  var skill2 = document.getElementById("skill2");
+  var skill3 = document.getElementById("skill3");
+  var skill4 = document.getElementById("skill4");
+  var skill5 = document.getElementById("skill5");
+  var skill6 = document.getElementById("skill6");
+  var skill7 = document.getElementById("skill7");
+  var skill8 = document.getElementById("skill8");
+  var skill9 = document.getElementById("skill9");
+  var skill10 = document.getElementById("skill10");
+  var skill11 = document.getElementById("skill11");
+  var skill12 = document.getElementById("skill12");
+  var skillList = ["skill1", "skill2", "skill3", "skill4", "skill5", "skill6", "skill7", "skill8", "skill9", "skill10", "skill11", "skill12",]
+  // dynamic ToolTip
+  var dynamicToolTip = document.getElementById("dynamicToolTip");
+  var skillWrapper = document.getElementById("skillWrapper");
+  var dTTName = document.getElementById("dTTName");
+  var dTTNumber = document.getElementById("dTTNumber");
+  var dTTP = document.getElementById("dTTP");
+  skill1.addEventListener("mouseover", d => { dTTF(0) });
+  skill2.addEventListener("mouseover", d => { dTTF(1) });
+  skill3.addEventListener("mouseover", d => { dTTF(2) });
+  skill4.addEventListener("mouseover", d => { dTTF(3) });
+  skill5.addEventListener("mouseover", d => { dTTF(4) });
+  skill6.addEventListener("mouseover", d => { dTTF(5) });
+  skill7.addEventListener("mouseover", d => { dTTF(6) });
+  skill8.addEventListener("mouseover", d => { dTTF(7) });
+  skill9.addEventListener("mouseover", d => { dTTF(8) });
+  skill10.addEventListener("mouseover", d => { dTTF(9) });
+  skill11.addEventListener("mouseover", d => { dTTF(10) });
+  skill12.addEventListener("mouseover", d => { dTTF(11) });
 
+  function dTTF(skillNum) {
+
+    switch (skillNum) {
+      case 0:
+        dTTNumber.innerHTML = "1";
+        break;
+      case 1:
+        dTTNumber.innerHTML = "2";
+        break;
+      case 2:
+        dTTNumber.innerHTML = "3";
+        break;
+      case 3:
+        dTTNumber.innerHTML = "4";
+        break;
+      case 4:
+        dTTNumber.innerHTML = "5";
+        break;
+      case 5:
+        dTTNumber.innerHTML = "6";
+        break;
+      case 6:
+        dTTNumber.innerHTML = "7";
+        break;
+      case 7:
+        dTTNumber.innerHTML = "8";
+        break;
+      case 8:
+        dTTNumber.innerHTML = "9";
+        break;
+      case 9:
+        dTTNumber.innerHTML = "10";
+        break;
+      case 10:
+        dTTNumber.innerHTML = "11";
+        break;
+      case 11:
+        dTTNumber.innerHTML = "12";
+        break;
+    }
+
+    window[skillList[skillNum]].addEventListener("mouseenter", e => {
+      dynamicToolTip.style.opacity = "1";
+      window[skillList[skillNum]].addEventListener('mousemove', y => {
+        dynamicToolTip.style.left = y.pageX + 'px';
+        dynamicToolTip.style.top = y.pageY + 'px';
+      });
+    });
+    window[skillList[skillNum]].addEventListener("mouseleave", e => {
+      dynamicToolTip.style.opacity = "0";
+    })
+  }
+
+  skillWrapper.addEventListener("mouseleave", e => {
+    dynamicToolTip.style.left = 'px';
+    dynamicToolTip.style.top = 'px';
+  })
+
+
+  // class Click Function
   function classClickFunction(current) {
     let classes = ["chronomancer", "summoner", "warrior", "ranger", "monk", "necromancer", "elementalist", "mesmer"];
     let classColors = ["pink", "teal", "yellow", "lightgreen", "lightskyblue", "green", "red", "purple"]
@@ -298,6 +386,9 @@
         for (let j = 0; j < skills.length; j++) {
           skills[j].style.borderColor = classColors[i];
         }
+
+        dTTName.innerHTML = classes[i].charAt(0).toUpperCase() + classes[i].slice(1);
+
       }
     }
   }
@@ -407,10 +498,10 @@
       continueButton = 0;
     }
     //                                                           ^^^^^^^^^^^^ ///
-    if (fireStone.style.opacity == "1" && frostStone.style.opacity == "1") {
-      catacombsButton.style.display = "block";
+    // if (fireStone.style.opacity == "1" && frostStone.style.opacity == "1") {
+    //   catacombsButton.style.display = "block";
+    // }
     }
-  }
 
   // Textbox Buttons
   eOne.addEventListener("click", e => {
@@ -461,11 +552,13 @@
       fireStone.style.animationName = "obtain";
       fireStone.style.opacity = "1";
       fireStone.style.fontWeight = "bold";
+      fireStone.style.color = "orangered"
     }
     if (stone == "frost") {
       frostStone.style.animationName = "obtain";
       frostStone.style.opacity = "1";
       frostStone.style.fontWeight = "bold";
+      frostStone.style.color = "aqua"
     }
   }
 

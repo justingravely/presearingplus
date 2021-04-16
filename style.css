@@ -12,6 +12,7 @@ body {
   background-color: black;
   background-image: url("https://cdn.discordapp.com/attachments/736393082831896590/821392922485981204/eddit.png");
   background-repeat: no-repeat;
+  transform-origin: 0 0;
 }
 
 .wrapper {
@@ -107,7 +108,7 @@ body {
 
 /* .post1 {
   margin: auto;
-  background-image: url("https://cdn.discordapp.com/attachments/309107283911245825/819352815565668362/Ascalon_waymaker_1.png");
+  background-image: url("https://cdn.discordapp.com/attachments/309107283911245825/819352815565668362/Ascalon_waymaker_1.png"); 
   background-size: cover;
   width: 20rem;
   height: 20.5rem;
@@ -315,7 +316,8 @@ body {
 }
 
 #catacombsButton {
-  display: none;
+  display: block;
+  opacity: 1;
   cursor: pointer;
   padding: 0.5rem;
   background-color: silver;
@@ -332,7 +334,7 @@ body {
 }
 #catacombsButton:hover {
  background-color: black;
- color: white;
+ color: silver;
  border: 2px solid white;
 }
 
@@ -371,26 +373,30 @@ body {
 }
 
 #fireStone {
-  color: orangered;
+  /* color: orangered; */
+  color: grey;
   padding-right: 0;
   padding-left: 0.44rem;
   /* font-weight: bold; */
   opacity: 0.5;
-  transition: 0.3s;
+  transition: 1s;
   animation-duration: 1s;
   animation-iteration-count: 3;
+  text-shadow: 1px 1px black;
 }
 #frostStone {
   /* font-weight: bold; */
-  color: aqua;
+  /* color: aqua; */
+  color: grey;
   padding-left: 0;
   opacity: 0.5;
-  transition: 0.3s;
+  transition: 1s;
   animation-duration: 1s;
   animation-iteration-count: 3;
+  text-shadow: 1px 1px black;
 }
 
-@keyframes obtain {
+/* @keyframes obtain {
   0% {
     font-size: default;
   } 50% {
@@ -398,12 +404,13 @@ body {
   } 100% {
     font-size: default;
   }
-}
+} */
 
 
 
 /* explainers */
 #explainers {
+  pointer-events: none;
   position: absolute;
   background-color: tan;
   width: 40rem;
@@ -786,11 +793,32 @@ body {
   display: block;
 }
 
- 
-
  .skills {
   border: 4px solid pink;
   background-color: grey;
+  cursor: pointer;
+ }
+
+ #dynamicToolTip {
+   position: absolute;
+   pointer-events: none;
+   height: fit-content;
+   margin: 0;
+   width: fit-content;
+ }
+
+ #dynamicToolTip p {
+  border: 1px solid black;
+   width: 10rem;
+   background-color: white;
+   position:absolute;
+   top: 0;
+   color: black;
+   margin: auto;
+ }
+
+ #dynamicToolTip span {
+   color: black;
  }
 
  .skills p {
@@ -800,9 +828,14 @@ body {
    height: 0; width: 0;
  }
 
- #skillTen p, #skillEleven p, #skillTwelve p {
+ #skill10 p, #skill11 p, #skill12 p {
   margin-left: 0.25rem;
  }
+
+ 
+ #dTTName:first-letter {
+  text-transform: capitalize;
+}
 
 
 
@@ -830,6 +863,7 @@ body {
   .credit {
     left: 4%;
     width: 61rem;
+    margin-top: 120.25rem;
   }
   
 } 
